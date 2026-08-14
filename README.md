@@ -1,4 +1,4 @@
-# 📦 Controle de Estoque Pro
+# 📦 Controle de Estoque 
 
 Sistema de gerenciamento de estoque moderno com interface responsiva em **Dark Mode** e integração com API REST em C# .NET.
 
