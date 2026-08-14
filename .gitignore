@@ -1,0 +1,10 @@
+# Pastas de compilação do C# / .NET
+bin/
+obj/
+.vs/
+*.user
+*.suo
+
+# Arquivos do sistema operacional
+.DS_Store
+Thumbs.db

@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* =========================================
+   VARIÁVEIS - TEMA ESCURO PREMIUM
+   ========================================= */
+:root {
+    --bg-body: #0f172a;        /* Azul noturno muito escuro */
+    --bg-card: #1e293b;        /* Cinza/Azul escuro para os cartões */
+    --primary-color: #3b82f6;  /* Azul vibrante principal */
+    --primary-hover: #2563eb;
+    --text-title: #f8fafc;     /* Branco quase puro */
+    --text-body: #cbd5e1;      /* Cinza claro para textos base */
+    --text-muted: #94a3b8;     /* Cinza médio para placeholders e tabela */
+    --border-color: #334155;   /* Bordas sutis no tema escuro */
+    --input-bg: #0f172a;       /* Fundo das caixas de texto */
+    
+    --color-success: #10b981;  /* Verde (Sucesso) */
+    --color-gray-btn: #475569; /* Cinza (Editar) */
+    --color-danger: #ef4444;   /* Vermelho (Excluir) */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--bg-body);
+    color: var(--text-body);
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+}
+
+/* Cabeçalho do Sistema */
+.header-sistema {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    color: var(--text-title);
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.btn-voltar {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+.btn-voltar:hover { color: var(--color-danger); }
+
+/* Cartões (Cards) */
+.card {
+    background: var(--bg-card);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    margin-bottom: 30px;
+    border: 1px solid var(--border-color);
+}
+
+.card h2 {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    color: var(--text-title);
+    font-weight: 600;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 12px;
+}
+
+/* Formulários */
+.form-group {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: var(--text-body);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 0.95rem;
+    background-color: var(--input-bg);
+    color: var(--text-title);
+    transition: all 0.2s ease;
+}
+
+input::placeholder { color: var(--text-muted); }
+
+input:focus, select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+}
+
+/* Botões */
+button, .btn {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-salvar {
+    background-color: var(--color-success);
+    color: white;
+    width: 100%;
+    padding: 14px;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+.btn-salvar:hover { background-color: #059669; }
+
+.btn-editar {
+    background-color: var(--color-gray-btn);
+    color: white;
+    margin-right: 5px;
+}
+.btn-editar:hover { background-color: #334155; }
+
+.btn-excluir {
+    background-color: var(--color-danger);
+    color: white;
+}
+.btn-excluir:hover { background-color: #dc2626; }
+
+/* Tabela */
+.table-responsive {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #0f172a;
+    color: var(--text-muted);
+    font-weight: 600;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    padding: 15px;
+    text-align: left;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+td {
+    padding: 15px;
+    font-size: 0.9rem;
+    color: var(--text-body);
+    border-bottom: 1px solid var(--border-color);
+}
+
+tr:hover { background-color: #1e293b; filter: brightness(1.2); }
+
+/* =========================================
+   TELA INICIAL (tela.html)
+   ========================================= */
+body.tela-inicial-body {
+    background: radial-gradient(circle at top right, #1e293b, #0f172a);
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+}
+
+.tela-inicial-container {
+    width: 100%;
+    max-width: 450px;
+    padding: 20px;
+}
+
+.hero-card {
+    background: var(--bg-card);
+    border-radius: 16px;
+    padding: 50px 40px;
+    text-align: center;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+}
+
+.icon-box {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.hero-card h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: var(--text-title);
+}
+
+.hero-card p {
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 35px;
+}
+
+.btn-entrar {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    padding: 16px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.btn-entrar:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(59, 130, 246, 0.4);
+}
